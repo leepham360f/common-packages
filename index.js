@@ -1,1 +1,1 @@
-alert("Hello, World!");
+export { NumberFormatter } from './components/NumberFormatter'
