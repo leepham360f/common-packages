@@ -14,7 +14,9 @@
     "build": "rollup -c",
     "start": "rollup -c -w"
   },
-  "dependencies": {},
+  "dependencies": {
+    "styled-components": "^5.2.1"
+  },
   "peerDependencies": {
     "react": ">= 17.0.0 < 2",
     "react-dom": ">= 17.0.0 < 2"
@@ -30,7 +32,6 @@
     "rollup": "^1.29.0",
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-typescript2": "^0.25.3",
-    "styled-components": "^5.2.1",
     "typescript": "^2.8.3"
   },
   "files": [
