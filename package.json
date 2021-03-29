@@ -1,16 +1,44 @@
 {
   "name": "@leepham360f/common-packages",
-  "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "exit 0"
+  "version": "1.0.0",
+  "description": "Common react packages",
+  "author": "leepham360f",
+  "license": "Apache-2.0",
+  "repository": "leepham360f/common-packages",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "react": "^17.0.2",
-    "styled-components": "^5.2.1"
-  }
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">= 17.0.0 < 2",
+    "react-dom": ">= 17.0.0 < 2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.3.13",
+    "@types/react-dom": "^16.0.5",
+    "@types/styled-components": "^5.1.9",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "rollup": "^1.29.0",
+    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "styled-components": "^5.2.1",
+    "typescript": "^2.8.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "npm"
+  ]
 }

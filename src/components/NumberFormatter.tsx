@@ -11,7 +11,12 @@ const Input = styled.input`
     width: 250px;
 `;
 
-export const NumberFormatter = ({ value, onValueChanged, fractionDigits = 2 }) => {
+interface NumberFormatterProps {
+  value: string
+  onValueChanged: (value: string) => {}
+  fractionDigits: number
+}
+export const NumberFormatter = ({ value, onValueChanged, fractionDigits = 2 }: NumberFormatterProps) => {
   const [fomattedNumber, setFomattedNumber] = useState(0)
 
   useEffect(() => {
@@ -19,8 +24,8 @@ export const NumberFormatter = ({ value, onValueChanged, fractionDigits = 2 }) =
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value])
 
-  function formatNumber(value) {
-    const temp = value.replace(/,/g, "")
+  function formatNumber(value: string) {
+    const temp: any = value.replace(/,/g, "")
     if (isNaN(temp)) {
       return;
     }
@@ -37,7 +42,7 @@ export const NumberFormatter = ({ value, onValueChanged, fractionDigits = 2 }) =
     return temp;
   }
 
-  const onChange = e => {
+  const onChange = (e: any) => {
     const value = formatNumber(e.target.value);
     if(value){
       onValueChanged(Number(value).toFixed(2))
