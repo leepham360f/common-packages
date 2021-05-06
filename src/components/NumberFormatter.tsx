@@ -12,9 +12,9 @@ const Input = styled.input`
 `;
 
 interface NumberFormatterProps {
-  value: string
-  onValueChanged: (value: string) => {}
-  fractionDigits: number
+  value: string;
+  onValueChanged: (value: string) => {};
+  fractionDigits: number;
 }
 export const NumberFormatter = ({ value, onValueChanged, fractionDigits = 2 }: NumberFormatterProps) => {
   const [fomattedNumber, setFomattedNumber] = useState(0)
